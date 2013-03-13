@@ -1,0 +1,14 @@
+{
+    "name" : "Flash-on-AngularJS",
+    "version" : "0.0.1",
+    "author" : "Eugene Krevenets",
+    "dependencies" : {
+        "express" : "*",
+        "mongoose" : "*",
+        "path" : "*"
+    },
+    "engines": {
+        "node": "0.8.x",
+        "npm": "1.1.x"
+    }
+}
