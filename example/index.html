@@ -10,8 +10,10 @@
 <body>
 <div ng-controller="ImageUploaderCtrl">
     <h1>Flash Component with basic JavaScript-ActionScript interaction.</h1>
-    <flash flash-id="testFlash" source="flash/app.swf" flashvars="{{flashvars}}" allow-script-access="always" allownetworking="all">
-    </flash>
+
+    <!-- use class="flash" for IE capability -->
+    <div class="flash" flash-id="testFlash" source="flash/app.swf" flashvars="{{flashvars}}" allow-script-access="always" allownetworking="all">
+    </div>
     <div>
         <p>Html Side:</p>
         <input ng-model="message" style="width:100%"/>

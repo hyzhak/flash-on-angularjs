@@ -14,7 +14,7 @@ function ImageUploaderCtrl($scope) {
         defaultImageUrl: 'http://beta.celebvideomessages.com/i/inprogress.gif',
         imageUrl: 'http://dl.realaxy.com/3q7tl3dnv0rp16h4l038p9fcov',
         postUrl: 'http://beta.celebvideomessages.com/api/v1/profile/edit/',
-        postTemplate: '{id : {{id}}, userpic_data : {{userpic_data}} }',
+        postTemplate: '{"id" : "{{id}}", "userpic_data" : "{{userpic_data}}" }',
         uploadButtonIsVisible: true,
         //
         //fetch
@@ -139,6 +139,10 @@ angular.module('flashContainer', []).directive('flash', ['$compile', function fa
                         }
                     }
                 }
+
+                scope.flashvarsString = scope.flashvarsString.replace(/"/g, '&quot;');
+
+                console.log('scope.flashvarsString = ' + scope.flashvarsString);
 
                 invalidateView();
             });
